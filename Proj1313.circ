@@ -143,7 +143,7 @@
     <comp lib="0" loc="(1330,290)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="SumOA"/>
+      <a name="label" val="O"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
@@ -159,12 +159,12 @@
     </comp>
     <comp lib="0" loc="(210,300)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="a"/>
+      <a name="label" val="A"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(210,410)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="b"/>
+      <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(250,410)" name="Splitter">
@@ -238,7 +238,7 @@
     <comp lib="0" loc="(1200,1160)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="north"/>
-      <a name="label" val="Outp"/>
+      <a name="label" val="O"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
@@ -249,7 +249,7 @@
     </comp>
     <comp lib="0" loc="(390,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="b"/>
+      <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(390,120)" name="Splitter">
@@ -519,7 +519,7 @@
     <comp lib="0" loc="(1080,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="DiffOA"/>
+      <a name="label" val="O"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
@@ -535,7 +535,7 @@
     </comp>
     <comp lib="0" loc="(170,430)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="b"/>
+      <a name="label" val="B"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(180,430)" name="Splitter">
@@ -550,7 +550,7 @@
     </comp>
     <comp lib="0" loc="(210,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="a"/>
+      <a name="label" val="A"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(210,180)" name="Splitter">
