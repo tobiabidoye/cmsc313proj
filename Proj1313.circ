@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.9.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Pin">
@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#../ArithmeticCircuitsLab.circ" name="12"/>
+  <lib desc="file#../cmsc313proj1ALU/ArithmeticCircuitsLab.circ" name="12"/>
   <main name="Arch"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -94,14 +94,27 @@
     <a name="circuit" val="ALU"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(250,170)" name="Pin">
+    <comp lib="0" loc="(1160,310)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="label" val="A"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="O"/>
+      <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(250,190)" name="Pin">
+    <comp lib="0" loc="(1160,330)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Cout"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(250,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(250,80)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(260,610)" name="Pin">
@@ -109,21 +122,74 @@
       <a name="label" val="opcode"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(990,410)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="O"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
+    <comp lib="0" loc="(440,340)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(990,430)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Cout"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp loc="(270,340)" name="Mult8bit"/>
-    <wire from="(260,610)" to="(710,610)"/>
+    <comp lib="0" loc="(440,420)" name="Constant"/>
+    <comp loc="(1130,310)" name="Mux8bit8x1"/>
+    <comp loc="(670,120)" name="XOR8bit"/>
+    <comp loc="(670,180)" name="AND8bit"/>
+    <comp loc="(670,240)" name="OR8bit"/>
+    <comp loc="(670,300)" name="addr8bit"/>
+    <comp loc="(670,380)" name="sub8bit"/>
+    <comp loc="(670,460)" name="shift8bit"/>
+    <comp loc="(670,500)" name="Mult8bit"/>
+    <wire from="(1130,310)" to="(1160,310)"/>
+    <wire from="(1160,330)" to="(1160,660)"/>
+    <wire from="(250,100)" to="(300,100)"/>
+    <wire from="(250,80)" to="(270,80)"/>
+    <wire from="(260,610)" to="(910,610)"/>
+    <wire from="(270,120)" to="(270,180)"/>
+    <wire from="(270,120)" to="(450,120)"/>
+    <wire from="(270,180)" to="(270,240)"/>
+    <wire from="(270,180)" to="(450,180)"/>
+    <wire from="(270,240)" to="(270,300)"/>
+    <wire from="(270,240)" to="(450,240)"/>
+    <wire from="(270,300)" to="(270,380)"/>
+    <wire from="(270,300)" to="(450,300)"/>
+    <wire from="(270,380)" to="(270,490)"/>
+    <wire from="(270,380)" to="(450,380)"/>
+    <wire from="(270,80)" to="(270,120)"/>
+    <wire from="(300,100)" to="(300,140)"/>
+    <wire from="(300,100)" to="(910,100)"/>
+    <wire from="(300,140)" to="(300,200)"/>
+    <wire from="(300,140)" to="(450,140)"/>
+    <wire from="(300,200)" to="(300,260)"/>
+    <wire from="(300,200)" to="(450,200)"/>
+    <wire from="(300,260)" to="(300,320)"/>
+    <wire from="(300,260)" to="(450,260)"/>
+    <wire from="(300,320)" to="(300,400)"/>
+    <wire from="(300,320)" to="(450,320)"/>
+    <wire from="(300,400)" to="(300,460)"/>
+    <wire from="(300,400)" to="(450,400)"/>
+    <wire from="(300,460)" to="(300,500)"/>
+    <wire from="(300,460)" to="(450,460)"/>
+    <wire from="(440,340)" to="(450,340)"/>
+    <wire from="(440,420)" to="(450,420)"/>
+    <wire from="(450,420)" to="(460,420)"/>
+    <wire from="(670,120)" to="(900,120)"/>
+    <wire from="(670,180)" to="(890,180)"/>
+    <wire from="(670,240)" to="(880,240)"/>
+    <wire from="(670,300)" to="(870,300)"/>
+    <wire from="(670,320)" to="(680,320)"/>
+    <wire from="(670,380)" to="(860,380)"/>
+    <wire from="(670,460)" to="(870,460)"/>
+    <wire from="(680,320)" to="(680,660)"/>
+    <wire from="(680,660)" to="(1160,660)"/>
+    <wire from="(860,380)" to="(860,410)"/>
+    <wire from="(860,410)" to="(910,410)"/>
+    <wire from="(870,300)" to="(870,390)"/>
+    <wire from="(870,390)" to="(910,390)"/>
+    <wire from="(870,430)" to="(870,460)"/>
+    <wire from="(870,430)" to="(910,430)"/>
+    <wire from="(880,240)" to="(880,370)"/>
+    <wire from="(880,370)" to="(910,370)"/>
+    <wire from="(890,180)" to="(890,350)"/>
+    <wire from="(890,350)" to="(910,350)"/>
+    <wire from="(900,120)" to="(900,330)"/>
+    <wire from="(900,330)" to="(910,330)"/>
+    <wire from="(910,100)" to="(910,310)"/>
+    <wire from="(910,470)" to="(910,610)"/>
   </circuit>
   <circuit name="addr8bit">
     <a name="appearance" val="logisim_evolution"/>
@@ -1153,6 +1219,7 @@
     <wire from="(690,310)" to="(730,310)"/>
   </circuit>
   <circuit name="Mux8bit8x1">
+    <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="Mux8bit8x1"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
