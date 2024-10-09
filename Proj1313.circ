@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <lib desc="file#../cmsc313proj1ALU/ArithmeticCircuitsLab.circ" name="12"/>
+  <lib desc="file#ArithmeticCircuitsLab.circ" name="12"/>
   <main name="Arch"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -153,7 +153,18 @@
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(440,420)" name="Constant"/>
+    <comp lib="0" loc="(790,890)" name="Splitter">
+      <a name="appear" val="center"/>
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="0" loc="(850,710)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp loc="(1130,310)" name="Mux8bit8x1"/>
+    <comp loc="(1140,710)" name="Mux1bit8x1"/>
     <comp loc="(670,120)" name="XOR8bit"/>
     <comp loc="(670,180)" name="AND8bit"/>
     <comp loc="(670,240)" name="OR8bit"/>
@@ -162,7 +173,8 @@
     <comp loc="(670,460)" name="shift8bit"/>
     <comp loc="(670,500)" name="Mult8bit"/>
     <wire from="(1130,310)" to="(1160,310)"/>
-    <wire from="(1160,330)" to="(1160,660)"/>
+    <wire from="(1140,710)" to="(1160,710)"/>
+    <wire from="(1160,330)" to="(1160,710)"/>
     <wire from="(150,200)" to="(150,540)"/>
     <wire from="(150,540)" to="(450,540)"/>
     <wire from="(220,180)" to="(250,180)"/>
@@ -172,7 +184,7 @@
     <wire from="(250,100)" to="(300,100)"/>
     <wire from="(250,60)" to="(250,80)"/>
     <wire from="(250,80)" to="(270,80)"/>
-    <wire from="(260,610)" to="(910,610)"/>
+    <wire from="(260,610)" to="(620,610)"/>
     <wire from="(270,120)" to="(270,180)"/>
     <wire from="(270,120)" to="(450,120)"/>
     <wire from="(270,180)" to="(270,240)"/>
@@ -199,19 +211,30 @@
     <wire from="(420,520)" to="(450,520)"/>
     <wire from="(440,340)" to="(450,340)"/>
     <wire from="(440,420)" to="(450,420)"/>
+    <wire from="(620,610)" to="(620,880)"/>
+    <wire from="(620,610)" to="(910,610)"/>
+    <wire from="(620,880)" to="(790,880)"/>
     <wire from="(670,120)" to="(900,120)"/>
     <wire from="(670,180)" to="(890,180)"/>
     <wire from="(670,240)" to="(880,240)"/>
     <wire from="(670,300)" to="(870,300)"/>
-    <wire from="(670,320)" to="(680,320)"/>
+    <wire from="(670,320)" to="(730,320)"/>
     <wire from="(670,380)" to="(860,380)"/>
+    <wire from="(670,400)" to="(720,400)"/>
     <wire from="(670,460)" to="(870,460)"/>
     <wire from="(670,500)" to="(900,500)"/>
-    <wire from="(680,320)" to="(680,660)"/>
-    <wire from="(680,660)" to="(1160,660)"/>
     <wire from="(70,180)" to="(150,180)"/>
     <wire from="(70,60)" to="(250,60)"/>
     <wire from="(70,60)" to="(70,180)"/>
+    <wire from="(720,400)" to="(720,810)"/>
+    <wire from="(720,810)" to="(920,810)"/>
+    <wire from="(730,320)" to="(730,790)"/>
+    <wire from="(730,790)" to="(920,790)"/>
+    <wire from="(790,880)" to="(790,890)"/>
+    <wire from="(810,880)" to="(920,880)"/>
+    <wire from="(810,890)" to="(920,890)"/>
+    <wire from="(810,900)" to="(920,900)"/>
+    <wire from="(850,710)" to="(890,710)"/>
     <wire from="(860,380)" to="(860,410)"/>
     <wire from="(860,410)" to="(910,410)"/>
     <wire from="(870,300)" to="(870,390)"/>
@@ -222,12 +245,25 @@
     <wire from="(880,370)" to="(910,370)"/>
     <wire from="(890,180)" to="(890,350)"/>
     <wire from="(890,350)" to="(910,350)"/>
+    <wire from="(890,710)" to="(890,730)"/>
+    <wire from="(890,710)" to="(920,710)"/>
+    <wire from="(890,730)" to="(890,750)"/>
+    <wire from="(890,730)" to="(920,730)"/>
+    <wire from="(890,750)" to="(890,770)"/>
+    <wire from="(890,750)" to="(920,750)"/>
+    <wire from="(890,770)" to="(890,830)"/>
+    <wire from="(890,770)" to="(920,770)"/>
+    <wire from="(890,830)" to="(890,850)"/>
+    <wire from="(890,830)" to="(920,830)"/>
+    <wire from="(890,850)" to="(920,850)"/>
     <wire from="(900,120)" to="(900,330)"/>
     <wire from="(900,330)" to="(910,330)"/>
     <wire from="(900,450)" to="(900,500)"/>
     <wire from="(900,450)" to="(910,450)"/>
     <wire from="(910,100)" to="(910,310)"/>
     <wire from="(910,470)" to="(910,610)"/>
+    <wire from="(920,870)" to="(920,880)"/>
+    <wire from="(920,900)" to="(920,910)"/>
   </circuit>
   <circuit name="addr8bit">
     <a name="appearance" val="logisim_evolution"/>
