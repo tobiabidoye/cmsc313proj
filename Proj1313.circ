@@ -122,6 +122,7 @@
       <a name="label" val="Cout"/>
       <a name="output" val="true"/>
     </comp>
+    <comp loc="(270,340)" name="Mult8bit"/>
     <wire from="(260,610)" to="(710,610)"/>
   </circuit>
   <circuit name="addr8bit">
@@ -1658,6 +1659,7 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="O"/>
+      <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="1" loc="(3450,730)" name="AND Gate">
